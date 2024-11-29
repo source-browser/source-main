@@ -24,3 +24,14 @@ function startTime(){
 
 document.getElementById("github-button").onclick = function () {
 window.location.replace("https://github.com/WooRepo/webbrowser"); };
+
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+    var query = document.getElementById('searchInput').value.trim();
+    
+    // Check if the search input is empty
+    if (query === "") {
+        // If empty, prevent the form from submitting (no redirect)
+        event.preventDefault();
+        alert("Please enter a search term.");
+    }
+});
