@@ -1,3 +1,13 @@
+const searchButton = document.querySelector('.searchBtn');
+document.querySelector('form').addEventListener('submit', function(e) {
+    var searchTerm = document.querySelector('input[name="q"]').value.trim();
+    if (searchTerm === '') {
+        e.preventDefault();
+        
+        console.log("nooor");
+    }
+});
+
 startTime();
 
 function startTime(){
@@ -10,7 +20,6 @@ function startTime(){
     let daywords = days[day];
     minutes = checkTime(minutes);
     seconds = checkTime(seconds);
-
     document.getElementById('clockTag').innerText = 
     hours + ":" + minutes + ":" + seconds;
     setTimeout(startTime,1000);
@@ -24,14 +33,3 @@ function startTime(){
 
 document.getElementById("github-button").onclick = function () {
 window.location.replace("https://github.com/WooRepo/webbrowser"); };
-
-document.getElementById('searchForm').addEventListener('submit', function(event) {
-    var query = document.getElementById('searchInput').value.trim();
-    
-    // Check if the search input is empty
-    if (query === "") {
-        // If empty, prevent the form from submitting (no redirect)
-        event.preventDefault();
-        alert("Please enter a search term.");
-    }
-});
