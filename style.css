@@ -36,6 +36,13 @@ p{
     border: none;
     background: gray;
     border-radius: 5px;
+    transition: 0.3s;
+
+}
+
+#github-button:hover{
+    width:45px;
+    height:45px;
 }
 img{
     width:40px;
@@ -71,11 +78,16 @@ input{
     border: none;background: rgb(220,220,220);
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
-    
+    transition:0.1;
+}
+
+input:hover{
+    background: rgb(235,235,235);
 }
 
 input:focus {
     outline: none;
+    background: rgb(210,210,210);
 }
 
 .searchBtn{
