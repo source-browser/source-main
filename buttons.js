@@ -11,15 +11,15 @@
   dynamicIsland.style.alignItems = 'center';
   dynamicIsland.style.gap = '10px';
   dynamicIsland.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
-  dynamicIsland.style.opacity = '0.2';  // Much more faded
-  dynamicIsland.style.transition = 'opacity 0.3s ease';
+  dynamicIsland.style.opacity = '0';  // Even more fade :3
+  dynamicIsland.style.transition = 'opacity 1s ease'; //longer fade time >:3
 
   dynamicIsland.addEventListener('mouseenter', () => {
     dynamicIsland.style.opacity = '1';
   });
 
   dynamicIsland.addEventListener('mouseleave', () => {
-    dynamicIsland.style.opacity = '0.2';
+    dynamicIsland.style.opacity = '0'; //removed slight visibility while non hovered
   });
 
   const backButton = document.createElement('button');
